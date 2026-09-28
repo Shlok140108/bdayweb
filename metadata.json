@@ -1,0 +1,6 @@
+{
+  "name": "A Magical Birthday - Always",
+  "description": "An enchanted romantic countdown and memory gallery for my favorite witch, filled with floating Harry Potter magic and our precious moments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

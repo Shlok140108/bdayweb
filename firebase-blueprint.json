@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "appConfig": {
+      "title": "AppConfig",
+      "description": "Global application configuration for girlfriend, countdown, theme, letter, and magic elements",
+      "type": "object",
+      "properties": {
+        "girlfriend": { "type": "object" },
+        "countdown": { "type": "object" },
+        "letter": { "type": "object" },
+        "magicElements": { "type": "object" },
+        "hedwig": { "type": "object" },
+        "bgmi": { "type": "object" },
+        "audio": { "type": "object" },
+        "theme": { "type": "object" },
+        "security": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["girlfriend", "countdown"]
+    },
+    "memory": {
+      "title": "Memory",
+      "description": "Romantic memory item with photo and caption",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "date": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "caption": { "type": "string" },
+        "chapter": { "type": "string" },
+        "location": { "type": "string" },
+        "magicalSpell": { "type": "string" },
+        "order": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "imageUrl"]
+    },
+    "loveSpell": {
+      "title": "LoveSpell",
+      "description": "Love charm or spell reason",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "spell": { "type": "string" },
+        "meaning": { "type": "string" },
+        "reason": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["id", "spell", "reason"]
+    },
+    "specialPlace": {
+      "title": "SpecialPlace",
+      "description": "Sacred place (Hogwarts, Rozhok, Astronomy Tower)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "realm": { "type": "string" },
+        "tag": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "romanticStory": { "type": "string" },
+        "symbolIcon": { "type": "string" },
+        "cozyDetail": { "type": "string" }
+      },
+      "required": ["id", "name", "realm", "romanticStory"]
+    }
+  },
+  "firestore": {
+    "/appConfig/main": {
+      "entity": "appConfig"
+    },
+    "/memories/{memoryId}": {
+      "entity": "memory"
+    },
+    "/loveSpells/{spellId}": {
+      "entity": "loveSpell"
+    },
+    "/specialPlaces/{placeId}": {
+      "entity": "specialPlace"
+    }
+  }
+}
